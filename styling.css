@@ -1,0 +1,99 @@
+/* Base + CSS variables */
+:root {
+  --bg: linear-gradient(135deg, #4a90e2, #9013fe);
+  --text: #ffffff;
+  --panel-bg: rgba(255, 255, 255, 0.1);
+  --shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  --accent: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--bg);
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+}
+
+/* Theme variants (applied on <body>) */
+.theme-default {
+  --bg: linear-gradient(135deg, pink, purple);
+  --text: #ffffff;
+  --panel-bg: rgba(255, 255, 255, 0.1);
+  --shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  --accent: #ffffff;
+}
+
+.theme-dark {
+  --bg: #0f1222;
+  --text: #e6e6e6;
+  --panel-bg: rgba(255, 255, 255, 0.06);
+  --shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  --accent: #8ab4f8;
+}
+
+.theme-light {
+  --bg: #f5f7fb;
+  --text: #1f2937;
+  --panel-bg: #ffffffcc;
+  --shadow: 0 8px 30px rgba(31, 41, 55, 0.12);
+  --accent: #3b82f6;
+}
+
+.theme-neon {
+  --bg: radial-gradient(1200px 600px at 20% 20%, #1a1a1a 0%, #0a0a0a 60%, #000 100%);
+  --text: #e0ffee;
+  --panel-bg: rgba(10, 10, 10, 0.7);
+  --shadow: 0 0 35px rgba(0, 255, 170, 0.25);
+  --accent: #00ffaa;
+}
+
+
+.controls {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: var(--panel-bg);
+  backdrop-filter: blur(8px);
+  padding: 8px 12px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.controls select {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 6px 10px;
+  outline: none;
+}
+
+/* Clock */
+.clock-container {
+  text-align: center;
+  background: var(--panel-bg);
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+#time {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+#date {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}

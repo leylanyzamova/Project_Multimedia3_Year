@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Clock</title>
+  <link rel="stylesheet" href="styling.css" />
+</head>
+<body class="theme-default">
+  <div class="controls">
+    <label for="themeSelect">Theme:</label>
+    <select id="themeSelect" aria-label="Choose theme">
+      <option value="default">Default</option>
+      <option value="dark">Dark</option>
+      <option value="light">Light</option>
+      <option value="neon">Neon</option>
+    </select>
+  </div>
+
+  <div class="clock-container">
+    <h1 id="time">00:00:00</h1>
+    <p id="date">Loading...</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
