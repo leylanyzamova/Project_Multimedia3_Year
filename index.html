@@ -6,7 +6,9 @@
   <title>Digital Clock</title>
   <link rel="stylesheet" href="styling.css" />
 </head>
+
 <body class="theme-default">
+
   <div class="controls">
     <label for="themeSelect">Theme:</label>
     <select id="themeSelect" aria-label="Choose theme">
@@ -17,11 +19,16 @@
     </select>
   </div>
 
-  <div class="clock-container">
-    <h1 id="time">00:00:00</h1>
-    <p id="date">Loading...</p>
+  <div class="clock-wrap">
+      <canvas id="clockCanvas"></canvas>
+
+      <div class="clock-container">
+        <h1 id="time">00:00:00</h1>
+        <p id="date">Loading...</p>
+      </div>
   </div>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
+
 </body>
 </html>
